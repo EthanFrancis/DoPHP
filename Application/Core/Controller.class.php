@@ -10,7 +10,7 @@ include_once 'Library/Smarty/Smarty.class.php';
 
 //通过表名，返回：Model类的对象
 function M($tableName = NULL) {
-	include_once 'Application/cCore/Model.class.php';
+	include_once 'Application/Core/Model.class.php';
 	$model = new Model();
 	if ($tableName != NULL) {
 		$model->tableName = $tableName;
@@ -19,7 +19,7 @@ function M($tableName = NULL) {
 }
 //通过模型名，返回：模型对象
 function D($modelName) {
-	include_once 'application/model/' . $modelName . '.php';
+	include_once 'Application/Model/' . $modelName . '.php';
 	$model = new $modelName();
 	return $model;
 }
@@ -30,7 +30,7 @@ class Controller {
 
 	//初始化Smarty(在入口文件中实例化子类控制器对象，将调用该构造)
 	public function __construct() {
-		include 'application/configs/config.php';
+		include 'Application/Configs/configs.php';
 		$this->smarty = new Smarty();
 		$this->smarty->caching = $config["smarty"]["caching"];
 		$this->smarty->cache_lifetime = $config["smarty"]["cache_lifetime"];
