@@ -3,7 +3,7 @@
  * @Author: Fang
  * @Date:   2016-01-06 21:31:28
  * @Last Modified by:   Fang
- * @Last Modified time: 2016-01-06 21:40:27
+ * @Last Modified time: 2016-01-06 22:10:27
  */
 include_once 'Application/Core/Controller.php'; //所有控制器的父类
 include_once 'Application/Core/Model.php'; //所有模型的父类
